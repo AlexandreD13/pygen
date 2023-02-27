@@ -1,0 +1,29 @@
+"""
+Author:         $author_name
+Creation date:  $date
+Documentation:
+References:
+"""
+
+from setuptools import setup, find_packages
+
+setup(
+    name="$project_name",
+    version="0.1.0",
+    packages=find_packages(),
+    install_requires=[],
+    url="",
+    license="",
+    author="$author_name",
+    author_email="",
+    description="",
+    python_requires="~=$python_version",
+    py_modules=["cli"],
+    entry_points={
+        "console_scripts": [
+            "$project_name = cli:cli"
+        ]
+    },
+    include_package_data=True,
+    package_data={"": [""]},
+)

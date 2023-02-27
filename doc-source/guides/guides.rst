@@ -1,0 +1,227 @@
+Guides
+======
+
+Here are a few guides about the ressources coming with the :doc:`Pygen<../index>` package.
+
+----------------------------------------------------------------------------------------------
+
+`Sphinx <https://www.sphinx-doc.org/en/master/index.html>`_
+-----------------------------------------------------------
+
+To build the documentation, you can move to the *docs/* folder:
+
+..  code-block:: bash
+    :emphasize-lines: 2
+
+    ../pygen/
+        docs/...
+        pygen/...
+        .gitignore
+        cli.py
+        LICENSE
+        README.md
+        requirements.txt
+        setup.py
+        TODO.md
+
+and run the following command:
+
+..  code-block:: bash
+    :linenos:
+
+    $ sphinx-build doc-source docs/
+
+.. warning::
+    *docs/* should be built with the previous command, otherwise Github Pages won't be able to read the files
+    properly. A *.nojekyll* should also be added in the *docs/* folder if it is not already present.
+
+`reStructuredText <https://docutils.sourceforge.io/docs/user/rst/quickref.html#footnotes>`_
+*******************************************************************************************
+
+The `sphinx <https://www.sphinx-doc.org/en/master/index.html>`_ documentation is written using the
+`reStructuredText <https://docutils.sourceforge.io/docs/user/rst/quickref.html#footnotes>`_ *.rst* language (though it
+can also be written with the `Markdown <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`_ *.md* language).
+
+Most useful syntax
+++++++++++++++++++
+
+* Italic, bold and code text
+    .. code-block:: console
+        :linenos:
+
+        *Italic text*
+        **Bold text**
+        ``Inline text``
+
+    **Example:**
+
+        *Italic text*
+
+        **Bold text**
+
+        ``Inline text``
+
+* Headings
+    ..  code-block:: console
+        :linenos:
+
+        Heading 1
+        =========
+
+        Heading 2
+        ---------
+
+        Heading 3
+        *********
+
+        Heading 4
+        +++++++++
+
+* Line separators
+    ..  code-block:: console
+        :linenos:
+
+        ----------------------------------------------------------------------------------
+
+* Code blocks
+    .. code-block:: console
+        :linenos:
+
+        .. code-block:: console
+            :linenos:
+
+            your code here
+
+    **Example:**
+
+        .. code-block:: console
+            :linenos:
+
+            your code here
+
+* Making a Glossary
+    ..  code-block:: console
+        :linenos:
+
+        .. glossary::
+
+            environment
+                A structure where information about all documents under the root is
+                saved, and used for cross-referencing.  The environment is pickled
+                after the parsing stage, so that successive runs only need to read
+                and parse new and changed documents.
+
+            source directory
+                The directory which, including its subdirectories, contains all
+                source files for one Sphinx project.
+
+    **Example:**
+
+        .. glossary::
+
+            environment
+                A structure where information about all documents under the root is
+                saved, and used for cross-referencing.  The environment is pickled
+                after the parsing stage, so that successive runs only need to read
+                and parse new and changed documents.
+
+            source directory
+                The directory which, including its subdirectories, contains all
+                source files for one Sphinx project.
+
+* Making a Note
+    .. code-block:: console
+        :linenos:
+
+        .. note::
+            This is a note.
+
+    **Example:**
+
+        .. note::
+            This is a note.
+
+* Making a Warning
+    .. code-block:: console
+        :linenos:
+
+        .. warning::
+            This is a warning.
+
+    **Example:**
+
+        .. warning::
+            This is a warning.
+
+* Making a Table
+    .. code-block:: console
+        :linenos:
+
+        .. list-table:: Title
+            :widths: 40 30 30
+            :header-rows: 1
+
+            * - Heading row 1, column 1
+              - Heading row 1, column 2
+              - Heading row 1, column 3
+            * - Row 1, column 1
+              -
+              - Row 1, column 3
+            * - Row 2, column 1
+              - Row 2, column 2
+              - Row 2, column 3
+
+    **Example:**
+
+        .. list-table:: Title
+            :widths: 40 30 30
+            :header-rows: 1
+
+            * - Heading row 1, column 1
+              - Heading row 1, column 2
+              - Heading row 1, column 3
+            * - Row 1, column 1
+              -
+              - Row 1, column 3
+            * - Row 2, column 1
+              - Row 2, column 2
+              - Row 2, column 3
+
+* Adding images
+    .. code-block:: console
+        :linenos:
+
+        .. image:: path/filename.png
+            :height: 400
+            :align: center
+            :alt: Alternative text
+
+    **Example:**
+
+        .. image:: ../images/image-example.jpg
+            :height: 400
+            :align: center
+            :alt: image-example
+
+`Sphinx autobuild <https://github.com/executablebooks/sphinx-autobuild>`_
+*************************************************************************
+
+Leave the *docs/* folder, then run the documentation on a local server which listens to any changes to the doc
+and updates them live.
+
+..  code-block:: bash
+    :linenos:
+
+    $ cd ..
+
+    $ sphinx-autobuild docs/ docs/build/html
+
+`Sphinx themes <https://sphinx-rtd-theme.readthedocs.io/en/stable/>`_
+*********************************************************************
+
+(sphinx-rtd-theme)
+
+Top themes
+++++++++++
+
+afadfdfadfadfafdafadfa
