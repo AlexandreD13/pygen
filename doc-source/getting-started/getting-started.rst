@@ -1,7 +1,7 @@
 Getting Started
 ===============
 
-To use :doc:`Pygen<index>`, you need to add it to your PATH. Go to the root of :doc:`Pygen<index>`
+To use Pygen, you need to add it to your PATH. Go to the root of Pygen
 (where **setup.py** is):
 
 ..  code-block:: bash

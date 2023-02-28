@@ -3,16 +3,16 @@ Guides
 
 Here are a few guides about the ressources coming with the Pygen package.
 
-Sphinx (see `doc <https://www.sphinx-doc.org/en/master/index.html>`_)
----------------------------------------------------------------------
+Sphinx (see `doc <https://www.sphinx-doc.org/en/master/index.html>`__)
+----------------------------------------------------------------------
 
 .. toctree::
     :maxdepth: 2
 
     sphinx.rst
 
-reStructuredText (see `doc <https://docutils.sourceforge.io/docs/user/rst/quickref.html#footnotes>`_)
------------------------------------------------------------------------------------------------------
+reStructuredText (see `doc <https://docutils.sourceforge.io/docs/user/rst/quickref.html#footnotes>`__)
+------------------------------------------------------------------------------------------------------
 
 .. toctree::
     :maxdepth: 2

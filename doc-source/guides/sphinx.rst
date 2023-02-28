@@ -2,8 +2,8 @@ Introduction
 ************
 
 The Sphinx documentation is written using the
-`reStructuredText <https://docutils.sourceforge.io/docs/user/rst/quickref.html#footnotes>`_ *.rst* language (though it
-can also be written with the `Markdown <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`_ *.md*
+`reStructuredText <https://docutils.sourceforge.io/docs/user/rst/quickref.html#footnotes>`__ *.rst* language (though it
+can also be written with the `Markdown <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>`__ *.md*
 language).
 
 Getting started
@@ -46,8 +46,8 @@ See Next section about ``sphinx-autobuild``.
     *docs/* should be built with the previous command, otherwise Github Pages won't be able to read the files
     properly. A *.nojekyll* file should also be added in the *docs/* folder if it is not already present.
 
-`Sphinx autobuild <https://github.com/executablebooks/sphinx-autobuild>`_
-*************************************************************************
+`Sphinx autobuild <https://github.com/executablebooks/sphinx-autobuild>`__
+**************************************************************************
 
 Leave the *docs/* folder, then run the documentation on a local server which listens to any changes to the doc
 and updates them live.
@@ -59,8 +59,8 @@ and updates them live.
 
     $ sphinx-autobuild doc-source/ docs/
 
-`Sphinx themes <https://sphinx-rtd-theme.readthedocs.io/en/stable/>`_
-*********************************************************************
+`Sphinx themes <https://sphinx-rtd-theme.readthedocs.io/en/stable/>`__
+**********************************************************************
 
 (sphinx-rtd-theme)
 
