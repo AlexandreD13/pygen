@@ -1,5 +1,5 @@
-Getting Started
-===============
+Installing Pygen
+================
 
 To use Pygen, you need to add it to your PATH. Go to the root of Pygen
 (where **setup.py** is):
