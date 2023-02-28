@@ -29,11 +29,11 @@ and run the following command:
 ..  code-block:: bash
     :linenos:
 
-    $ sphinx-build docs/source docs/
+    $ sphinx-build doc-source docs/
 
 .. warning::
     *docs/* should be built with the previous command, otherwise Github Pages won't be able to read the files
-    properly. A *.nojekyll* should also be added in the *docs/* folder.
+    properly. A *.nojekyll* should also be added in the *docs/* folder if it is not already present.
 
 `reStructuredText <https://docutils.sourceforge.io/docs/user/rst/quickref.html#footnotes>`_
 *******************************************************************************************
