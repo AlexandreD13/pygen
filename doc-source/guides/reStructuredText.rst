@@ -325,7 +325,7 @@ Enumerated lists
         3. Object 3
 
 Options lists
-************
+*************
 
     .. code-block:: console
         :linenos:

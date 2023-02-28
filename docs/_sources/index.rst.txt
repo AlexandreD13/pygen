@@ -8,8 +8,8 @@ Welcome to Pygen's documentation!
     :maxdepth: 3
     :caption: Table of Contents
 
+    getting-started/index.rst
     guides/index.rst
-    usage/index.rst
 
 Indices and tables
 ==================

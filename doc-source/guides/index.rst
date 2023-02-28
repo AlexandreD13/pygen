@@ -1,7 +1,7 @@
 Guides
 ======
 
-Here are a few guides about the ressources coming with the :doc:`Pygen<../index>` package.
+Here are a few guides about the ressources coming with the Pygen package.
 
 Sphinx (see `doc <https://www.sphinx-doc.org/en/master/index.html>`_)
 ---------------------------------------------------------------------
