@@ -239,6 +239,36 @@ source files for one Sphinx project.</p>
 </dl>
 </li>
 <li><dl>
+<dt>Making an Attention</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="go">.. attention::</span>
+<span class="linenos">2</span><span class="go">    This is an attention.</span>
+</pre></div>
+</div>
+<p><strong>Example:</strong></p>
+<blockquote>
+<div><div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This is an attention.</p>
+</div>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Making a Caution</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="go">.. caution::</span>
+<span class="linenos">2</span><span class="go">    This is a caution.</span>
+</pre></div>
+</div>
+<p><strong>Example:</strong></p>
+<blockquote>
+<div><div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>This is a caution.</p>
+</div>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><dl>
 <dt>Making a Table</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="go">.. list-table:: Title</span>
 <span class="linenos"> 2</span><span class="go">    :widths: 40 30 30</span>
 <span class="linenos"> 3</span><span class="go">    :header-rows: 1</span>
@@ -307,7 +337,7 @@ source files for one Sphinx project.</p>
 and updates them live.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>..
 <span class="linenos">2</span>
-<span class="linenos">3</span>$<span class="w"> </span>sphinx-autobuild<span class="w"> </span>docs/<span class="w"> </span>docs/build/html
+<span class="linenos">3</span>$<span class="w"> </span>sphinx-autobuild<span class="w"> </span>doc-source/<span class="w"> </span>docs/
 </pre></div>
 </div>
 </section>

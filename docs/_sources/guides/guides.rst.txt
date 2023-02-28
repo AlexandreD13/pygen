@@ -153,6 +153,30 @@ Most useful syntax
         .. warning::
             This is a warning.
 
+* Making an Attention
+    .. code-block:: console
+        :linenos:
+
+        .. attention::
+            This is an attention.
+
+    **Example:**
+
+        .. attention::
+            This is an attention.
+
+* Making a Caution
+    .. code-block:: console
+        :linenos:
+
+        .. caution::
+            This is a caution.
+
+    **Example:**
+
+        .. caution::
+            This is a caution.
+
 * Making a Table
     .. code-block:: console
         :linenos:
@@ -214,7 +238,7 @@ and updates them live.
 
     $ cd ..
 
-    $ sphinx-autobuild docs/ docs/build/html
+    $ sphinx-autobuild doc-source/ docs/
 
 `Sphinx themes <https://sphinx-rtd-theme.readthedocs.io/en/stable/>`_
 *********************************************************************

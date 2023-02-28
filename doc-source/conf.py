@@ -27,3 +27,8 @@ html_static_path = ["_static"]
 html_css_files = [
     "fixed-theme-width.css",
 ]
+html_sidebars = {
+    '**': [
+        'globaltoc.html',
+    ]
+}
