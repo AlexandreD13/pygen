@@ -32,3 +32,5 @@ html_sidebars = {
         'globaltoc.html',
     ]
 }
+
+html_show_sourcelink = False
