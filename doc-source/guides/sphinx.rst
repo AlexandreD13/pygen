@@ -62,9 +62,35 @@ and updates them live.
 `Sphinx themes <https://sphinx-rtd-theme.readthedocs.io/en/stable/>`__
 **********************************************************************
 
-(sphinx-rtd-theme)
+Switching themes
+++++++++++++++++
+
+To change the theme, simply change the value ``html_theme = "sphinx_rtd_theme"`` *in conf.py* to any other theme.
+You must also include the theme in your *setup.py*/*requirements.txt* files.
 
 Top themes
 ++++++++++
 
-afadfdfadfadfafdafadfa
+.. attention::
+    Change links to actual images of the themes with links to repos/install procedure.
+
+Book
+    Can easily be converted to *.pdf* or *.rst*.
+
+    https://sphinx-themes.org/sample-sites/sphinx-book-theme/
+Furo
+    Has light/dark mode.
+
+    https://sphinx-themes.org/sample-sites/furo/#
+Groundwork
+    Dark mode.
+
+    https://sphinx-themes.org/sample-sites/groundwork-sphinx-theme/
+Karma
+    https://sphinx-themes.org/sample-sites/karma-sphinx-theme/
+Press
+    https://sphinx-themes.org/sample-sites/sphinx-press-theme/
+Read The Docs
+    https://sphinx-themes.org/sample-sites/sphinx-rtd-theme/
+Renku
+    https://sphinx-themes.org/sample-sites/renku-sphinx-theme/
