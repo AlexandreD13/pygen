@@ -20,7 +20,7 @@ Root of the project:
 
     ../$project_name/
         $project_name-doc-source/...
-        $project_name-doc-build/...
+        $project_name-docs/...
         $project_name/...
         .gitignore
         cli.py
@@ -44,11 +44,11 @@ and updates them live.
 ..  code-block:: bash
     :linenos:
 
-    $ sphinx-autobuild $project_name-doc-source/ $project_name-doc-build/
+    $ sphinx-autobuild $project_name-doc-source/ $project_name-docs/
 
 .. important::
-    *$project_name-doc-build/* should be built with the previous commands, otherwise Github Pages won't be able to read the files
-    properly. A *.nojekyll* file should also be added in the *$project_name-doc-build/* folder if it is not already present.
+    *$project_name-docs/* should be built with the previous commands, otherwise Github Pages won't be able to read the files
+    properly. A *.nojekyll* file should also be added in the *$project_name-docs/* folder if it is not already present.
 
 sphinx-build
 ++++++++++++
@@ -61,11 +61,11 @@ From the *root* folder, run this command to simply build the documentation witho
 ..  code-block:: bash
     :linenos:
 
-    $ sphinx-build $project_name-doc-source/ $project_name-doc-build/
+    $ sphinx-build $project_name-doc-source/ $project_name-docs/
 
 .. important::
-    *$project_name-doc-build/* should be built with the previous commands, otherwise Github Pages won't be able to read the files
-    properly. A *.nojekyll* file should also be added in the *$project_name-doc-build/* folder if it is not already present.
+    *$project_name-docs/* should be built with the previous commands, otherwise Github Pages won't be able to read the files
+    properly. A *.nojekyll* file should also be added in the *$project_name-docs/* folder if it is not already present.
 
 
 sphinx-quickstart

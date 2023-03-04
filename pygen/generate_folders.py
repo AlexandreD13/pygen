@@ -30,7 +30,7 @@ def create_folder(args, project_directory: str) -> None:
     directory_names = [
         project_name,
         project_name + "/tests",
-        project_name + "-doc-build",
+        project_name + "-docs",
         project_name + "-doc-source",
         project_name + "-doc-source/_static/",
         project_name + "-doc-source/_template/",

@@ -8,7 +8,7 @@ if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=sphinx-build
 )
 set SOURCEDIR=pygen-doc-source/
-set BUILDDIR=pygen-doc-build/
+set BUILDDIR=pygen-docs/
 
 %SPHINXBUILD% >NUL 2>NUL
 if errorlevel 9009 (

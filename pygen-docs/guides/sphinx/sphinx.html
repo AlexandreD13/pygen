@@ -231,7 +231,7 @@ language).</p>
 <p>Root of the project:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>../pygen/
 <span class="hll"><span class="w">    </span>pygen-doc-source/...
-</span><span class="hll"><span class="w">    </span>pygen-doc-build/...
+</span><span class="hll"><span class="w">    </span>pygen-docs/...
 </span><span class="w">    </span>pygen/...
 <span class="w">    </span>.gitignore
 <span class="w">    </span>cli.py
@@ -248,13 +248,13 @@ language).</p>
 - <a class="reference external" href="https://github.com/executablebooks/sphinx-autobuild">https://github.com/executablebooks/sphinx-autobuild</a></p>
 <p>From the <em>root</em> folder, run the documentation on a local server which listens to any changes to the doc
 and updates them live.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>$<span class="w"> </span>sphinx-autobuild<span class="w"> </span>pygen-doc-source/<span class="w"> </span>pygen-doc-build/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>$<span class="w"> </span>sphinx-autobuild<span class="w"> </span>pygen-doc-source/<span class="w"> </span>pygen-docs/
 </pre></div>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p><em>pygen-doc-build/</em> should be built with the previous commands, otherwise Github Pages won’t be able to read the files
-properly. A <em>.nojekyll</em> file should also be added in the <em>pygen-doc-build/</em> folder if it is not already present.</p>
+<p><em>pygen-docs/</em> should be built with the previous commands, otherwise Github Pages won’t be able to read the files
+properly. A <em>.nojekyll</em> file should also be added in the <em>pygen-docs/</em> folder if it is not already present.</p>
 </div>
 </section>
 <section id="sphinx-build">
@@ -262,13 +262,13 @@ properly. A <em>.nojekyll</em> file should also be added in the <em>pygen-doc-bu
 <p>Documentation:
 - <a class="reference external" href="https://www.sphinx-doc.org/en/master/man/sphinx-build.html">https://www.sphinx-doc.org/en/master/man/sphinx-build.html</a></p>
 <p>From the <em>root</em> folder, run this command to simply build the documentation without listening to changes live.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>$<span class="w"> </span>sphinx-build<span class="w"> </span>pygen-doc-source/<span class="w"> </span>pygen-doc-build/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>$<span class="w"> </span>sphinx-build<span class="w"> </span>pygen-doc-source/<span class="w"> </span>pygen-docs/
 </pre></div>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p><em>pygen-doc-build/</em> should be built with the previous commands, otherwise Github Pages won’t be able to read the files
-properly. A <em>.nojekyll</em> file should also be added in the <em>pygen-doc-build/</em> folder if it is not already present.</p>
+<p><em>pygen-docs/</em> should be built with the previous commands, otherwise Github Pages won’t be able to read the files
+properly. A <em>.nojekyll</em> file should also be added in the <em>pygen-docs/</em> folder if it is not already present.</p>
 </div>
 </section>
 <section id="sphinx-quickstart">

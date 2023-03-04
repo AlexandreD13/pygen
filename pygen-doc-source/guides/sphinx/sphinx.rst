@@ -20,7 +20,7 @@ Root of the project:
 
     ../pygen/
         pygen-doc-source/...
-        pygen-doc-build/...
+        pygen-docs/...
         pygen/...
         .gitignore
         cli.py
@@ -42,11 +42,11 @@ and updates them live.
 ..  code-block:: bash
     :linenos:
 
-    $ sphinx-autobuild pygen-doc-source/ pygen-doc-build/
+    $ sphinx-autobuild pygen-doc-source/ pygen-docs/
 
 .. important::
-    *pygen-doc-build/* should be built with the previous commands, otherwise Github Pages won't be able to read the files
-    properly. A *.nojekyll* file should also be added in the *pygen-doc-build/* folder if it is not already present.
+    *pygen-docs/* should be built with the previous commands, otherwise Github Pages won't be able to read the files
+    properly. A *.nojekyll* file should also be added in the *pygen-docs/* folder if it is not already present.
 
 sphinx-build
 ++++++++++++
@@ -59,11 +59,11 @@ From the *root* folder, run this command to simply build the documentation witho
 ..  code-block:: bash
     :linenos:
 
-    $ sphinx-build pygen-doc-source/ pygen-doc-build/
+    $ sphinx-build pygen-doc-source/ pygen-docs/
 
 .. important::
-    *pygen-doc-build/* should be built with the previous commands, otherwise Github Pages won't be able to read the files
-    properly. A *.nojekyll* file should also be added in the *pygen-doc-build/* folder if it is not already present.
+    *pygen-docs/* should be built with the previous commands, otherwise Github Pages won't be able to read the files
+    properly. A *.nojekyll* file should also be added in the *pygen-docs/* folder if it is not already present.
 
 
 sphinx-quickstart
