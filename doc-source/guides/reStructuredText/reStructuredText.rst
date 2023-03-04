@@ -178,7 +178,7 @@ Version added
     vX.X.X Here’s a version added message.
 
 Version changed
-***************
++++++++++++++++
 
 .. code-block:: reStructuredText
     :linenos:
@@ -192,7 +192,7 @@ Version changed
     vX.X.X Here’s a version changed message.
 
 Code blocks
-+++++++++++
+***********
 
 .. code-block:: reStructuredText
     :linenos:
@@ -210,7 +210,7 @@ Code blocks
     your code here
 
 Headings
-++++++++
+********
 
 ..  code-block:: reStructuredText
     :linenos:
@@ -247,7 +247,7 @@ Headings
     - Heading 2.2
 
 Images
-++++++
+******
 
 .. code-block:: reStructuredText
     :linenos:
@@ -265,7 +265,7 @@ Images
     :alt: image-example
 
 Italic, bold and code text
-++++++++++++++++++++++++++++
+**************************
 
 .. code-block:: reStructuredText
     :linenos:
@@ -281,7 +281,7 @@ Italic, bold and code text
     ``Inline text``
 
 Line separators
-+++++++++++++++
+***************
 
 ..  code-block:: reStructuredText
     :linenos:
@@ -293,10 +293,10 @@ Line separators
 ----------
 
 Links
-+++++
+*****
 
-Internal Pages (Custom anchor)
-******************************
+Internal Pages
+++++++++++++++
 
 When you have two sections with the same title in a project, you will get build errors when
 you have a link to either section, because Sphinx does not know which section to link to.
@@ -328,7 +328,7 @@ In a ``:ref:`` command, you then use the anchor text.
     This is a link to the Sphinx Overview: :ref:`Sphinx Overview`
 
 External Pages
-**************
+++++++++++++++
 
 .. code-block:: reStructuredText
     :linenos:
@@ -340,10 +340,10 @@ External Pages
 `Google <http://google.com>`__
 
 Lists
-++++++++++++
+*****
 
 Bullet lists
-************
+++++++++++++
 
 .. code-block:: reStructuredText
     :linenos:
@@ -359,7 +359,7 @@ Bullet lists
 - Object 3
 
 Definition lists
-****************
+++++++++++++++++
 
 .. code-block:: reStructuredText
     :linenos:
@@ -381,7 +381,7 @@ Object 3:
     This is the definition for Object 3.
 
 Enumerated lists
-****************
+++++++++++++++++
 
 .. code-block:: reStructuredText
     :linenos:
@@ -397,7 +397,7 @@ Enumerated lists
 3. Object 3
 
 Options lists
-*************
++++++++++++++
 
 .. code-block:: reStructuredText
     :linenos:
@@ -421,7 +421,7 @@ Options lists
 /V            DOS/VMS-style options too
 
 Making a Glossary
-+++++++++++++++++
+*****************
 
 ..  code-block:: reStructuredText
     :linenos:
@@ -453,7 +453,7 @@ Source directory
     source files for one Sphinx project.
 
 Making a Table
-++++++++++++++
+**************
 
 .. code-block:: reStructuredText
     :linenos:

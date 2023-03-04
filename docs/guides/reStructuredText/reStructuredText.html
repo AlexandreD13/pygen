@@ -165,13 +165,15 @@
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">reStructuredText</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Introduction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#admonitions">Admonitions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#version-changed">Version changed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#internal-pages-custom-anchor">Internal Pages (Custom anchor)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#external-pages">External Pages</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bullet-lists">Bullet lists</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#definition-lists">Definition lists</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enumerated-lists">Enumerated lists</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#options-lists">Options lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-blocks">Code blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#headings">Headings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#images">Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#italic-bold-and-code-text">Italic, bold and code text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#line-separators">Line separators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lists">Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#making-a-glossary">Making a Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#making-a-table">Making a Table</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../sphinx/index.html">Sphinx</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -367,9 +369,8 @@
 <p><span class="versionmodified added">New in version vX.X.X: </span>Here’s a version added message.</p>
 </div>
 </section>
-</section>
 <section id="version-changed">
-<h1>Version changed<a class="headerlink" href="#version-changed" title="Permalink to this heading">#</a></h1>
+<h2>Version changed<a class="headerlink" href="#version-changed" title="Permalink to this heading">#</a></h2>
 <div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">..</span> <span class="ow">versionchanged</span><span class="p">::</span>
 <span class="linenos">2</span>    vX.X.X Here’s a version changed message.
 </pre></div>
@@ -378,8 +379,10 @@
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version vX.X.X: </span>Here’s a version changed message.</p>
 </div>
+</section>
+</section>
 <section id="code-blocks">
-<h2>Code blocks<a class="headerlink" href="#code-blocks" title="Permalink to this heading">#</a></h2>
+<h1>Code blocks<a class="headerlink" href="#code-blocks" title="Permalink to this heading">#</a></h1>
 <div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
 <span class="linenos">2</span>    <span class="nc">:linenos:</span>
 <span class="linenos">3</span>
@@ -392,7 +395,7 @@
 </div>
 </section>
 <section id="headings">
-<h2>Headings<a class="headerlink" href="#headings" title="Permalink to this heading">#</a></h2>
+<h1>Headings<a class="headerlink" href="#headings" title="Permalink to this heading">#</a></h1>
 <div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="gh">Heading 1.1</span>
 <span class="linenos"> 2</span><span class="gh">===========</span>
 <span class="linenos"> 3</span>
@@ -447,7 +450,7 @@
 </ul>
 </section>
 <section id="images">
-<h2>Images<a class="headerlink" href="#images" title="Permalink to this heading">#</a></h2>
+<h1>Images<a class="headerlink" href="#images" title="Permalink to this heading">#</a></h1>
 <div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> path/filename.png
 <span class="linenos">2</span>    <span class="nc">:height:</span> 400
 <span class="linenos">3</span>    <span class="nc">:align:</span> center
@@ -458,7 +461,7 @@
 <a class="reference internal image-reference" href="../../_images/image-example.jpg"><img alt="image-example" class="align-center" src="../../_images/image-example.jpg" style="height: 400px;" /></a>
 </section>
 <section id="italic-bold-and-code-text">
-<h2>Italic, bold and code text<a class="headerlink" href="#italic-bold-and-code-text" title="Permalink to this heading">#</a></h2>
+<h1>Italic, bold and code text<a class="headerlink" href="#italic-bold-and-code-text" title="Permalink to this heading">#</a></h1>
 <div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="ge">*Italic text*</span>
 <span class="linenos">2</span><span class="gs">**Bold text**</span>
 <span class="linenos">3</span><span class="s">``Inline text``</span>
@@ -472,7 +475,7 @@
 </div></blockquote>
 </section>
 <section id="line-separators">
-<h2>Line separators<a class="headerlink" href="#line-separators" title="Permalink to this heading">#</a></h2>
+<h1>Line separators<a class="headerlink" href="#line-separators" title="Permalink to this heading">#</a></h1>
 <div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>----------
 </pre></div>
 </div>
@@ -480,11 +483,9 @@
 </section>
 <hr class="docutils" />
 <section id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this heading">#</a></h2>
-</section>
-</section>
-<section id="internal-pages-custom-anchor">
-<h1>Internal Pages (Custom anchor)<a class="headerlink" href="#internal-pages-custom-anchor" title="Permalink to this heading">#</a></h1>
+<h1>Links<a class="headerlink" href="#links" title="Permalink to this heading">#</a></h1>
+<section id="internal-pages">
+<h2>Internal Pages<a class="headerlink" href="#internal-pages" title="Permalink to this heading">#</a></h2>
 <p>When you have two sections with the same title in a project, you will get build errors when
 you have a link to either section, because Sphinx does not know which section to link to.</p>
 <div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">..</span> <span class="nt">_RST Overview:</span>
@@ -510,18 +511,18 @@ you have a link to either section, because Sphinx does not know which section to
 </div>
 </section>
 <section id="external-pages">
-<h1>External Pages<a class="headerlink" href="#external-pages" title="Permalink to this heading">#</a></h1>
+<h2>External Pages<a class="headerlink" href="#external-pages" title="Permalink to this heading">#</a></h2>
 <div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="s">`Link text </span><span class="si">&lt;link URL&gt;</span><span class="s">`__</span>
 </pre></div>
 </div>
 <p><strong>Example:</strong></p>
 <p><a class="reference external" href="http://google.com">Google</a></p>
+</section>
+</section>
 <section id="lists">
-<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this heading">#</a></h2>
-</section>
-</section>
+<h1>Lists<a class="headerlink" href="#lists" title="Permalink to this heading">#</a></h1>
 <section id="bullet-lists">
-<h1>Bullet lists<a class="headerlink" href="#bullet-lists" title="Permalink to this heading">#</a></h1>
+<h2>Bullet lists<a class="headerlink" href="#bullet-lists" title="Permalink to this heading">#</a></h2>
 <div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="m">-</span> Object 1
 <span class="linenos">2</span><span class="m">-</span> Object 2
 <span class="linenos">3</span><span class="m">-</span> Object 3
@@ -535,7 +536,7 @@ you have a link to either section, because Sphinx does not know which section to
 </ul>
 </section>
 <section id="definition-lists">
-<h1>Definition lists<a class="headerlink" href="#definition-lists" title="Permalink to this heading">#</a></h1>
+<h2>Definition lists<a class="headerlink" href="#definition-lists" title="Permalink to this heading">#</a></h2>
 <div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>Object 1:
 <span class="linenos">2</span>    This is the definition for Object 1.
 <span class="linenos">3</span>Object 2:
@@ -555,7 +556,7 @@ you have a link to either section, because Sphinx does not know which section to
 </dl>
 </section>
 <section id="enumerated-lists">
-<h1>Enumerated lists<a class="headerlink" href="#enumerated-lists" title="Permalink to this heading">#</a></h1>
+<h2>Enumerated lists<a class="headerlink" href="#enumerated-lists" title="Permalink to this heading">#</a></h2>
 <div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="m">1.</span> Object 1
 <span class="linenos">2</span><span class="m">2.</span> Object 2
 <span class="linenos">3</span><span class="m">3.</span> Object 3
@@ -569,7 +570,7 @@ you have a link to either section, because Sphinx does not know which section to
 </ol>
 </section>
 <section id="options-lists">
-<h1>Options lists<a class="headerlink" href="#options-lists" title="Permalink to this heading">#</a></h1>
+<h2>Options lists<a class="headerlink" href="#options-lists" title="Permalink to this heading">#</a></h2>
 <div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>-a            command-line option &quot;a&quot;
 <span class="linenos">2</span>-b file       options can have arguments
 <span class="linenos">3</span>              and long descriptions
@@ -599,8 +600,10 @@ arguments</p>
 <dd><p>DOS/VMS-style options too</p>
 </dd>
 </dl>
+</section>
+</section>
 <section id="making-a-glossary">
-<h2>Making a Glossary<a class="headerlink" href="#making-a-glossary" title="Permalink to this heading">#</a></h2>
+<h1>Making a Glossary<a class="headerlink" href="#making-a-glossary" title="Permalink to this heading">#</a></h1>
 <div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">..</span> <span class="ow">glossary</span><span class="p">::</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span>    environment
@@ -629,7 +632,7 @@ source files for one Sphinx project.</p>
 </dl>
 </section>
 <section id="making-a-table">
-<h2>Making a Table<a class="headerlink" href="#making-a-table" title="Permalink to this heading">#</a></h2>
+<h1>Making a Table<a class="headerlink" href="#making-a-table" title="Permalink to this heading">#</a></h1>
 <div class="highlight-reStructuredText notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">..</span> <span class="ow">list-table</span><span class="p">::</span> Title
 <span class="linenos"> 2</span>    <span class="nc">:widths:</span> auto
 <span class="linenos"> 3</span>    <span class="nc">:header-rows:</span> 1
@@ -673,7 +676,6 @@ source files for one Sphinx project.</p>
 </tbody>
 </table>
 </div>
-</section>
 </section>
 
         </article>
