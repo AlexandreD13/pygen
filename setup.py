@@ -13,8 +13,8 @@ setup(
     packages=find_packages(),
     install_requires=[
         "Sphinx~=6.1.3",
-        "sphinx-rtd-theme~=1.2.0",
         "sphinx-autobuild~=2021.3.14",
+        "furo~=2022.12.7"
     ],
     url="",
     license="",

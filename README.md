@@ -29,9 +29,3 @@ basic folder hierarchy.
 
 ### Writing documentation
 - https://www.sphinx-doc.org/en/master/usage/quickstart.html
-
-Move to the *docs/* directory and run:
-````bash
-# where "builder" is one of the supported builders, e.g. html, pdf, epub, latex or linkcheck
->  make builder
-````

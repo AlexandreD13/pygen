@@ -1,0 +1,30 @@
+Installing
+==========
+
+To use $project_name_cap, you need to add it to your PATH. Go to the root of $project_name_cap
+(where **setup.py** is):
+
+..  code-block:: bash
+    :emphasize-lines: 9
+
+    ../$project_name/
+        $project_name-doc-source/...
+        $project_name-doc-build/...
+        $project_name/...
+        .gitignore
+        cli.py
+        LICENSE
+        make.bat
+        Makefile
+        README.md
+        requirements.txt
+        setup.py
+        TODO.md
+
+and run:
+
+..  code-block:: bash
+
+    $ python setup.py build
+
+    $ python setup.py install

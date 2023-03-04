@@ -27,7 +27,20 @@ def create_folder(args, project_directory: str) -> None:
     else:
         make_folder(root_directory, args.verbose)
 
-    directory_names = [project_name, project_name + "/tests", "docs"]
+    directory_names = [
+        project_name,
+        project_name + "/tests",
+        project_name + "-doc-build",
+        project_name + "-doc-source",
+        project_name + "-doc-source/_static/",
+        project_name + "-doc-source/_template/",
+        project_name + "-doc-source/getting-started/",
+        project_name + "-doc-source/guides/",
+        project_name + "-doc-source/guides/reStructuredText/",
+        project_name + "-doc-source/guides/sphinx/",
+        project_name + "-doc-source/images/"
+    ]
+
     for item in directory_names:
         directory = create_path(root_directory, item)
         make_folder(directory, args.verbose)
@@ -37,7 +50,6 @@ def make_folder(path: str, verbose: bool = False) -> None:
     """
 
     :param path:
-    :param prefix:
     :param verbose:
     :return:
     """
@@ -47,7 +59,7 @@ def make_folder(path: str, verbose: bool = False) -> None:
         raise IOError(000, error_message, '')
 
     if verbose:
-        print(f"{Color.BLUE}create:  +++{Color.END} {os.path.abspath(path)}")
+        print(f"{Color.BLUE}[ INFO ]{Color.END} created at {os.path.abspath(path)}")
 
 
 def create_path(project_directory: str, folder_name: str) -> str:
