@@ -7,8 +7,8 @@ REM Command file for Sphinx documentation
 if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=sphinx-build
 )
-set SOURCEDIR=pygen-doc-source/
-set BUILDDIR=pygen-docs/
+set SOURCEDIR=doc-source/
+set BUILDDIR=docs/
 
 %SPHINXBUILD% >NUL 2>NUL
 if errorlevel 9009 (

@@ -1,16 +1,16 @@
-Installing
-==========
+Installing Pygen
+================
 
-To use $project_name_cap, you need to add it to your PATH. Go to the root of $project_name_cap
+To use Pygen, you need to add it to your PATH. Go to the root of Pygen
 (where **setup.py** is):
 
 ..  code-block:: bash
     :emphasize-lines: 9
 
-    ../$project_name/
+    ../pygen/
         doc-source/...
         docs/...
-        $project_name/...
+        pygen/...
         .gitignore
         cli.py
         LICENSE

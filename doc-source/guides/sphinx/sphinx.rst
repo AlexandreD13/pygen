@@ -18,15 +18,13 @@ Root of the project:
 ..  code-block:: bash
     :emphasize-lines: 2, 3
 
-    ../$project_name/
-        $project_name-doc-source/...
-        $project_name-docs/...
-        $project_name/...
+    ../pygen/
+        doc-source/...
+        docs/...
+        pygen/...
         .gitignore
         cli.py
         LICENSE
-        make.bat
-        Makefile
         README.md
         requirements.txt
         setup.py
@@ -47,8 +45,8 @@ and updates them live.
     $ sphinx-autobuild doc-source/ docs/
 
 .. important::
-    *$project_name-docs/* should be built with the previous commands, otherwise Github Pages won't be able to read the files
-    properly. A *.nojekyll* file should also be added in the *$project_name-docs/* folder if it is not already present.
+    *pygen-docs/* should be built with the previous commands, otherwise Github Pages won't be able to read the files
+    properly. A *.nojekyll* file should also be added in the *pygen-docs/* folder if it is not already present.
 
 sphinx-build
 ++++++++++++
@@ -64,8 +62,8 @@ From the *root* folder, run this command to simply build the documentation witho
     $ sphinx-build doc-source/ docs/
 
 .. important::
-    *$project_name-docs/* should be built with the previous commands, otherwise Github Pages won't be able to read the files
-    properly. A *.nojekyll* file should also be added in the *$project_name-docs/* folder if it is not already present.
+    *pygen-docs/* should be built with the previous commands, otherwise Github Pages won't be able to read the files
+    properly. A *.nojekyll* file should also be added in the *pygen-docs/* folder if it is not already present.
 
 
 sphinx-quickstart

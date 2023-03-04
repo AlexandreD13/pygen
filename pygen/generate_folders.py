@@ -30,15 +30,15 @@ def create_folder(args, project_directory: str) -> None:
     directory_names = [
         project_name,
         project_name + "/tests",
-        project_name + "-docs",
-        project_name + "-doc-source",
-        project_name + "-doc-source/_static/",
-        project_name + "-doc-source/_template/",
-        project_name + "-doc-source/getting-started/",
-        project_name + "-doc-source/guides/",
-        project_name + "-doc-source/guides/reStructuredText/",
-        project_name + "-doc-source/guides/sphinx/",
-        project_name + "-doc-source/images/"
+        "docs/",
+        "doc-source/",
+        "doc-source/_static/",
+        "doc-source/_template/",
+        "doc-source/getting-started/",
+        "doc-source/guides/",
+        "doc-source/guides/reStructuredText/",
+        "doc-source/guides/sphinx/",
+        "doc-source/images/"
     ]
 
     for item in directory_names:
