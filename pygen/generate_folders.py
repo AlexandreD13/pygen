@@ -11,24 +11,27 @@ from textwrap import dedent
 import os
 
 
-def create_folder(args, project_directory: str) -> None:
+def create_folders(args, project_directory: str) -> None:
     """
     Description...
 
-    :param args: Arguments received by command-line interface.
+    :param args: Arguments received by command-line interface (project, verbose).
     :param project_directory: Directory where files will be created.
     :return: None
     """
+
     project_name: str = args.project[0]
+    verbose: bool = args.verbose
+
     root_directory: str = create_path(project_directory, project_name)
     if os.path.exists(root_directory) and os.listdir(root_directory):
         error_message: str = f"{Color.RED}[ FAILED ] {root_directory} already exists and is not empty. " \
                              f"Please try a different project name or root directory.{Color.END}"
         raise IOError(000, dedent(error_message))
     else:
-        make_folder(root_directory, args.verbose)
+        create_folder(root_directory, verbose)
 
-    directory_names = [
+    folders_to_create = [
         project_name,
         project_name + "\\tests",
         "docs\\",
@@ -42,19 +45,20 @@ def create_folder(args, project_directory: str) -> None:
         "doc-source\\images\\"
     ]
 
-    for item in directory_names:
-        directory = create_path(root_directory, item)
-        make_folder(directory, args.verbose)
+    for folder in folders_to_create:
+        directory = create_path(root_directory, folder)
+        create_folder(directory, verbose)
 
 
-def make_folder(path: str, verbose: bool = False) -> None:
+def create_folder(path: str, verbose: bool = False) -> None:
     """
     Description...
 
-    :param path: Arguments received by command-line interface.
+    :param path: Folder to create
     :param verbose: Verbose On/Off
     :return: None
     """
+
     os.mkdir(path)
     if os.path.exists(path) is False:
         error_message = f"{Color.RED}[ FAILED ] Unable to create root directory {path}. Path does not exist.{Color.END}"
@@ -72,5 +76,6 @@ def create_path(project_directory: str, folder_name: str) -> str:
     :param folder_name: Name of the folder to create.
     :return: Path of the folder to create
     """
+
     project_directory: str = os.path.abspath(project_directory)
     return os.path.join(project_directory, folder_name)

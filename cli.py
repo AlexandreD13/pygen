@@ -12,12 +12,14 @@ import argparse
 import os
 
 
-def parse_args() -> None:
+def cli(argv=None):
     """
     Description...
 
+    :param argv: Injected CLI arguments.
     :return: None
     """
+
     parser = argparse.ArgumentParser(prog="PyGen",
                                      description="A Python scaffolding tool")
 
@@ -30,9 +32,6 @@ def parse_args() -> None:
     parser.add_argument("--license", required=False, type=str, nargs=1,
                         default=["mit"], help="Generate specified LICENSE (default: \"mit\", \"apache\", \"gnu3\")")
 
-    # parser.add_argument("--extra_files", action="store_false",
-    #                     help="Toggle README.md, TODO.md, requirements.txt, .gitignore off")
-
     parser.add_argument("--verbose", action="store_true",
                         help="More information displayed")
 
@@ -40,15 +39,15 @@ def parse_args() -> None:
                         help="Author name")
 
     parser.add_argument("--python_version", required=False, type=str, nargs=1,
-                        default="3.6", help="Specify the Python version to use")
+                        default="3.9", help="Specify the Python version to use")
 
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     project_directory = os.getcwd()
 
     if args.path is not None:
-        project_directory = args.dir[0]
+        project_directory = args.path[0]
 
     print()
-    generate_folders.create_folder(args, project_directory)
+    generate_folders.create_folders(args, project_directory)
     generate_files.create_files(args, project_directory)
     print(f"{Color.BLUE}[  INFO  ] Files have been created successfully.{Color.END}")

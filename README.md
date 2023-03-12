@@ -1,6 +1,7 @@
 # PyGen
 
-### Build/Install
+### Build / Install
+
 Go to the root of pygen and run:
 ````bash
 $ python setup.py build
@@ -13,14 +14,23 @@ basic folder hierarchy.
 
 ### Install dependencies in venv
 
-Activate venv, then run:
+Make sure *venv* is activated, then run:
 ````bash
 $ python setup.py build
+
+$ python setup.py install
 ````
 
 ### Pytest
 
-On command-line, with venv activated, run:
+Pytest requirements: **Python 3.7+ or PyPy3**
+
+Make sure *venv* is activated, then run:
 ````bash
 $ pytest
+
+# Quite useful
+# -v = verbose
+# -q = quiet
+$ pytest --show-capture=no -v
 ````
