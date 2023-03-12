@@ -45,8 +45,8 @@ and updates them live.
     $ sphinx-autobuild doc-source/ docs/
 
 .. important::
-    *pygen-docs/* should be built with the previous commands, otherwise Github Pages won't be able to read the files
-    properly. A *.nojekyll* file should also be added in the *pygen-docs/* folder if it is not already present.
+    *docs/* should be built with the previous commands, otherwise Github Pages won't be able to read the files
+    properly. A *.nojekyll* file should also be added in the *docs/* folder if it is not already present.
 
 sphinx-build
 ++++++++++++
@@ -62,8 +62,8 @@ From the *root* folder, run this command to simply build the documentation witho
     $ sphinx-build doc-source/ docs/
 
 .. important::
-    *pygen-docs/* should be built with the previous commands, otherwise Github Pages won't be able to read the files
-    properly. A *.nojekyll* file should also be added in the *pygen-docs/* folder if it is not already present.
+    *docs/* should be built with the previous commands, otherwise Github Pages won't be able to read the files
+    properly. A *.nojekyll* file should also be added in the *docs/* folder if it is not already present.
 
 
 sphinx-quickstart
@@ -73,7 +73,7 @@ Documentation:
 - https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html
 
 Sphinx themes
-********************************************************************************
+*************
 
 Switching themes
 ++++++++++++++++

@@ -12,10 +12,11 @@ import argparse
 import os
 
 
-def cli():
+def parse_args() -> None:
     """
+    Description...
 
-    :return:
+    :return: None
     """
     parser = argparse.ArgumentParser(prog="PyGen",
                                      description="A Python scaffolding tool")
@@ -29,8 +30,8 @@ def cli():
     parser.add_argument("--license", required=False, type=str, nargs=1,
                         default=["mit"], help="Generate specified LICENSE (default: \"mit\", \"apache\", \"gnu3\")")
 
-    parser.add_argument("--extra_files", action="store_false",
-                        help="Toggle README.md, TODO.md, requirements.txt, .gitignore off")
+    # parser.add_argument("--extra_files", action="store_false",
+    #                     help="Toggle README.md, TODO.md, requirements.txt, .gitignore off")
 
     parser.add_argument("--verbose", action="store_true",
                         help="More information displayed")
@@ -47,10 +48,7 @@ def cli():
     if args.path is not None:
         project_directory = args.dir[0]
 
-    try:
-        print()
-        generate_folders.create_folder(args, project_directory)
-        generate_files.create_files(args, project_directory)
-        print(f"\n{Color.BLUE}Files have been created successfully.{Color.END}")
-    except IOError as e:
-        print(f"{Color.RED}{e.strerror}{Color.END}")
+    print()
+    generate_folders.create_folder(args, project_directory)
+    generate_files.create_files(args, project_directory)
+    print(f"{Color.BLUE}[  INFO  ] Files have been created successfully.{Color.END}")

@@ -25,7 +25,7 @@ setup(
     py_modules=["cli"],
     entry_points={
         "console_scripts": [
-            "pygen = cli:cli"
+            "pygen = cli:parse_args"
         ]
     },
     include_package_data=True,
