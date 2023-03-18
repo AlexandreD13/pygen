@@ -13,10 +13,14 @@ with open("requirements.txt") as f:
 setup(
     name="pygen",
     version="0.1.0",
-    packages=find_packages(),
+    packages=find_packages(
+        exclude=[
+            "pygen.tests"
+        ],
+    ),
     install_requires=requirements,
-    url="",
-    license="",
+    url="https://github.com/AlexandreD13/pygen",
+    license="MIT",
     author="Alexandre Desfosses",
     author_email="",
     description="A Python scaffolding tool",
@@ -27,6 +31,5 @@ setup(
             "pygen = cli:cli"
         ]
     },
-    include_package_data=True,
     package_data={"": ["templates/*.txt"]},
 )

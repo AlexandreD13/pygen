@@ -20,8 +20,7 @@ def create_folders(args, project_directory: str) -> None:
     :return: None
     """
 
-    project_name: str = args.project[0]
-    verbose: bool = args.verbose
+    project_name: str = args.project_name[0]
 
     root_directory: str = create_path(project_directory, project_name)
     if os.path.exists(root_directory) and os.listdir(root_directory):
@@ -29,25 +28,29 @@ def create_folders(args, project_directory: str) -> None:
                              f"Please try a different project name or root directory.{Color.END}"
         raise IOError(000, dedent(error_message))
     else:
-        create_folder(root_directory, verbose)
+        create_folder(root_directory, args.verbose)
 
     folders_to_create = [
         project_name,
         project_name + "\\tests",
-        "docs\\",
-        "doc-source\\",
-        "doc-source\\_static\\",
-        "doc-source\\_template\\",
-        "doc-source\\getting-started\\",
-        "doc-source\\guides\\",
-        "doc-source\\guides\\reStructuredText\\",
-        "doc-source\\guides\\sphinx\\",
-        "doc-source\\images\\"
     ]
+
+    if args.doc:
+        folders_to_create.extend([
+            "docs\\",
+            "doc-source\\",
+            "doc-source\\_static\\",
+            "doc-source\\_template\\",
+            "doc-source\\getting-started\\",
+            "doc-source\\guides\\",
+            "doc-source\\guides\\reStructuredText\\",
+            "doc-source\\guides\\sphinx\\",
+            "doc-source\\images\\"
+        ])
 
     for folder in folders_to_create:
         directory = create_path(root_directory, folder)
-        create_folder(directory, verbose)
+        create_folder(directory, args.verbose)
 
 
 def create_folder(path: str, verbose: bool = False) -> None:

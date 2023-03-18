@@ -66,8 +66,7 @@ def cli_valid_arguments():
     """
 
     return [
-        "--project", project_name,
-        "--author", author,
+        project_name,
     ]
 
 
@@ -79,24 +78,7 @@ def cli_invalid_arguments():
     :return:
     """
 
-    return [
-        "--project", project_name,
-    ]
-
-
-@pytest.fixture
-def invalid_path():
-    """
-    Description...
-
-    :return:
-    """
-
-    return [
-        "--project", project_name,
-        "--path", "missing-folder/" + project_name,
-        "--author", author,
-    ]
+    return []
 
 
 @pytest.fixture
@@ -107,9 +89,9 @@ def licenses_arguments():
     :return:
     """
 
-    return [["--project", project_name, "--author", author, "--license", "mit"],
-            ["--project", project_name, "--author", author, "--license", "apache"],
-            ["--project", project_name, "--author", author, "--license", "gnu3"]]
+    return [[project_name, "-a", author, "-l", "mit"],
+            [project_name, "-a", author, "-l", "apache"],
+            [project_name, "-a", author, "-l", "gnu3"]]
 
 
 @pytest.fixture
@@ -121,9 +103,8 @@ def python_version_arguments():
     """
 
     return [
-        "--project", project_name,
-        "--author", author,
-        "--python_version", "3.7",
+        project_name,
+        "-a", author,
     ]
 
 
@@ -149,8 +130,8 @@ class TestCli:
             assert os.path.exists(path) is True
 
         # Destroy created project
-        shutil.rmtree(cli_valid_arguments[1])
-        assert os.path.exists(cli_valid_arguments[1]) is False
+        shutil.rmtree(cli_valid_arguments[0])
+        assert os.path.exists(cli_valid_arguments[0]) is False
 
     def test_invalid_arguments(self, cli_invalid_arguments):
         """
@@ -177,14 +158,14 @@ class TestCli:
 
         # Use CLI to create new project except directory already exists
         try:
-            os.mkdir(cli_valid_arguments[1])
+            os.mkdir(cli_valid_arguments[0])
             cli.cli(cli_valid_arguments)
 
         except FileExistsError:
             assert True
 
         # Destroy created directory
-        os.rmdir(cli_valid_arguments[1])
+        os.rmdir(cli_valid_arguments[0])
 
     def test_licenses(self, licenses_arguments):
         """
@@ -197,49 +178,15 @@ class TestCli:
         for arguments in licenses_arguments:
             # Use CLI to create new project
             cli.cli(arguments)
-            assert os.path.exists(arguments[1]) is True
+            assert os.path.exists(arguments[0]) is True
 
-            file = open(arguments[1] + "\\LICENSE").readline()
+            file = open(arguments[0] + "\\LICENSE").readline()
             template = open(f"pygen\\templates\\license-{arguments[-1]}.txt").readline()
             assert file == template
 
             # Destroy created project
-            shutil.rmtree(arguments[1])
-            assert os.path.exists(arguments[1]) is False
-
-    def test_python_version(self, python_version_arguments):
-        """
-        Description...
-
-        :param python_version_arguments: Valid arguments to create a new project specifying Python version.
-        :return:
-        """
-
-        # Use CLI to create new project
-        cli.cli(python_version_arguments)
-        assert os.path.exists(python_version_arguments[1]) is True
-
-        file = open(python_version_arguments[1] + "\\setup.py").read()
-        assert file.__contains__(f"python_requires=\"=={python_version_arguments[-1]}\"")
-
-        # Destroy created project
-        shutil.rmtree(python_version_arguments[1])
-        assert os.path.exists(python_version_arguments[1]) is False
-
-    def test_invalid_path(self, invalid_path):
-        """
-        Description...
-
-        :param invalid_path: Invalid arguments to create a new project (invalid path).
-        :return:
-        """
-
-        try:
-            # Use CLI to create new project
-            cli.cli(invalid_path)
-
-        except FileNotFoundError:
-            assert True
+            shutil.rmtree(arguments[0])
+            assert os.path.exists(arguments[0]) is False
 
 
 class TestFileCreation:
@@ -262,12 +209,12 @@ class TestFileCreation:
         file = "temp-file.txt"
 
         # Create temp_file.txt with empty template
-        create_file((author, project_name, "3.7", False), file, "templates\\empty.txt")
+        create_file((author, project_name, False), file, "templates\\empty.txt")
         assert os.path.exists(file) is True
 
         # Destroy created project
-        shutil.rmtree(cli_valid_arguments[1])
-        assert os.path.exists(cli_valid_arguments[1]) is False
+        shutil.rmtree(cli_valid_arguments[0])
+        assert os.path.exists(cli_valid_arguments[0]) is False
 
         # Delete the file
         os.remove(file)
@@ -286,7 +233,7 @@ class TestFileCreation:
             cli.cli(cli_valid_arguments)
 
             # Create temp_file.txt with template that does not exist
-            create_file((author, project_name, "3.7", False),
+            create_file((author, project_name, False),
                         "temp-file.txt",
                         "templates\\template-that-does-not-exist.txt")
 
@@ -294,8 +241,8 @@ class TestFileCreation:
             assert True
 
             # Destroy created project
-            shutil.rmtree(cli_valid_arguments[1])
-            assert os.path.exists(cli_valid_arguments[1]) is False
+            shutil.rmtree(cli_valid_arguments[0])
+            assert os.path.exists(cli_valid_arguments[0]) is False
 
 
 class TestFolderCreation:
